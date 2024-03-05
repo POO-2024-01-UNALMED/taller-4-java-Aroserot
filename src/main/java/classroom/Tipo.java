@@ -10,10 +10,18 @@ public enum Tipo {
 
     private Tipo(int codigo, String nombre) {
         this.codigo = codigo;
-        this.nombre = nombre;
+        this.setNombre(nombre);
     }
 
     public int getCodigo() {
         return codigo;
     }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 }
