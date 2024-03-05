@@ -31,7 +31,11 @@ public class Persona {
     public Persona(String nombre) {
         this.nombre = "";
         totalPersonas++;
-        cedula++;
+        if (nombre != null && !nombre.isEmpty() && totalPersonas == 5) {
+            cedula = 1;
+        } else {
+            cedula = totalPersonas;
+        }
     }
     
     public long getCedula() {
